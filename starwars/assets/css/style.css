@@ -1,0 +1,17 @@
+
+
+body{
+    background-image: url("../images/starback.png");
+}
+
+image1{
+    cursor: pointer;
+}
+
+h1{
+    color: yellow;
+}
+
+img{
+    opacity: 1;
+}
