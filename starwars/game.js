@@ -19,6 +19,9 @@ var mace = {health: 100,
          attack:function(){
         return Math.floor(Math.random()*50);} }
 // these varaiables are for the 2 objects fighting. 
+
+ var idtoCharacter = {"mace": mace, "luke": luke, "jarjar": jarjar, "c3po":c3po}
+
 var userChoice = {
     health: "",
     attack: "",
@@ -54,7 +57,7 @@ $(".image1").on("click", function(e){
 // this allows the user to choose which enemy they want to go up against first 
 $("#foe").on("click", function(){
     $("#battle").append(this);
-    $("battle").append("#userSelect .image1")
+    $("#battle").append("#userSelect .image1")
     $("#foe .image1").hide();
     // this creates the attack button, and also the function for how attacking is giong to go
     $("#battle").append("<button>")
@@ -63,10 +66,10 @@ $("#foe").on("click", function(){
             // this is supposed to target the two images on the screen, the problem is I'm trying to just target the elements id so I can do if/else 
             // statements and match the picture up with the objects 
             // for example the picture is luke so i want to get the id luke so i can get the object attributes.e
-            var user = $(".image1:nth-child(1)").currentTarget.id;
+            var userID = $(".image1:nth-child(1)")[0].id;
             var enemy = $(".image1:nth-child(2)");
-            var user1 =user.currentTarget.id;
-            console.log(user)
+           
+            console.log(userID)
 
             
         })
