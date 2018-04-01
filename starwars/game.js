@@ -33,6 +33,11 @@ var userFoe ={
     attack:"",
 
 }
+$(document).ready(function(){
+      $(".row").hover(function(){
+      $(".row").css("background-color", "#66afff");
+    });
+});
 
 
 // this moves the users character into the userSelect area, and removes it from the selector box
@@ -67,10 +72,9 @@ $("#foe").on("click", function(){
             // statements and match the picture up with the objects 
             // for example the picture is luke so i want to get the id luke so i can get the object attributes.e
             var userID = $(".image1:nth-child(1)")[0].id;
-            var enemy = $(".image1:nth-child(2)");
-           
-            console.log(userID)
-
+            var enemyID = $(".image1:nth-child(2)")[0].id;
+            var user = idtoCharacter[userID];
+            var enemy = idtoCharacter[enemyID];
             
         })
       
