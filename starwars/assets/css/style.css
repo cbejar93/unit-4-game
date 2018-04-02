@@ -11,17 +11,3 @@ image1{
 h1{
     color: yellow;
 }
-
-img{
-    opacity: 1;
-}
-
-.row {
-    background-color: rgba(0, 123, 255, 0.5); 
-    transition: background-color .5s;
-}
-
-.row:hover {
-    background-color: rgba(102, 175, 255 , 0.5);
-    opacity: 0.5;
-}
