@@ -1,1 +1,1 @@
-# unit-4-game
+A game involving Star Wars characters were the user selects who he would like to play as first. Then the user has the oppurtunity to choose whom he will fight against. Each character has individual health and attack variables. After the two fighters are picked an Attack button appears and the user has a chance to click it which will damage his enemy's health while the enemy has a chance to damage his health back.
