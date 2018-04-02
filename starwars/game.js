@@ -73,8 +73,8 @@ $("#battle").on("click", function(){
             var userID = $(".image1:nth-child(1)")[0].id;
             var enemyID = $(".image1:nth-child(2)")[0].id;
             // With the ID in had we match it with their respective object by matching the strings.
-            // var attacker = idtoCharacter[userID];
-            // var defender = idtoCharacter[enemyID];
+            var user = idtoCharacter[userID];
+            var enemy = idtoCharacter[enemyID];
             // // this is the dynamic variables that should change to represent the attack   
             // var dcurrenthealth;
             // var acurrenthealth;
@@ -90,62 +90,65 @@ $("#battle").on("click", function(){
 
             const fights = () => {
                 // Luke fight series 
-                if (userID=="luke" && enemyID=="c3po"){
-                        luke.health-=c3po.attack;
-                        c3po.health-=luke.attack
-                        printToScreen ();
-                }
-                if (userID=="luke" && enemyID=="jarjar"){
-                    luke.health-=jarJar.attack;
-                    jarJar.health-=luke.attack
-                    printToScreen ();
-                }
-                if (userID=="luke" && enemyID=="mace"){
-                luke.health-=mace.attack;
-                mace.health-=luke.attack
-                printToScreen ();
-                }
+            //     if (userID=="luke" && enemyID=="c3po"){
+            //             luke.health-=c3po.attack;
+            //             c3po.health-=luke.attack
+            //             printToScreen ();
+            //     }
+            //     if (userID=="luke" && enemyID=="jarjar"){
+            //         luke.health-=jarJar.attack;
+            //         jarJar.health-=luke.attack
+            //         printToScreen ();
+            //     }
+            //     if (userID=="luke" && enemyID=="mace"){
+            //     luke.health-=mace.attack;
+            //     mace.health-=luke.attack
+            //     printToScreen ();
+            //     }
             
-            // C3PO fight series of functions 
-            if (userID=="c3po" && enemyID=="luke"){
-                c3po.health-=luke.attack;
-                luke.health-=c3po.attack
-                printToScreen ();
-            }
-            if (userID=="c3po" && enemyID=="jarJar"){
-                c3po.health-=jarJar.attack;
-                c3po.health-=c3po.attack
-                printToScreen ();
-            }
-            if (userID=="c3po" && enemyID=="mace"){
-                c3po.health-=mace.attack;
-                mace.health-=c3po.attack
-                printToScreen ();
-            }
+            // // C3PO fight series of functions 
+            // if (userID=="c3po" && enemyID=="luke"){
+            //     c3po.health-=luke.attack;
+            //     luke.health-=c3po.attack
+            //     printToScreen ();
+            // }
+            // if (userID=="c3po" && enemyID=="jarJar"){
+            //     c3po.health-=jarJar.attack;
+            //     c3po.health-=c3po.attack
+            //     printToScreen ();
+            // }
+            // if (userID=="c3po" && enemyID=="mace"){
+            //     c3po.health-=mace.attack;
+            //     mace.health-=c3po.attack
+            //     printToScreen ();
+            // }
 
-            // JARJARS fight series 
-            if (userID=="jarJar" && enemyID=="luke"){
-                jarJar.health-=luke.attack;
-                luke.health-=jarJar.attack
-                printToScreen ();
-            }
-            if (userID=="jarJar" && enemyID=="c3po"){
-                jarJar.health-=c3po.attack;
-                c3po.health-=jarJar.attack
-                printToScreen ();
-            }
-            if (userID=="jarJar" && enemyID=="mace"){
-                jarJar.health-=mace.attack;
-                mace.health-=jarJar.attack
-                printToScreen ();
-            }
+            // // JARJARS fight series 
+            // if (userID=="jarJar" && enemyID=="luke"){
+            //     jarJar.health-=luke.attack;
+            //     luke.health-=jarJar.attack
+            //     printToScreen ();
+            // }
+            // if (userID=="jarJar" && enemyID=="c3po"){
+            //     jarJar.health-=c3po.attack;
+            //     c3po.health-=jarJar.attack
+            //     printToScreen ();
+            // }
+            // if (userID=="jarJar" && enemyID=="mace"){
+            //     jarJar.health-=mace.attack;
+            //     mace.health-=jarJar.attack
+            //     printToScreen ();
+            // }
 
-            // Mace fight series
-            if (userID=="mace" && enemyID=="luke"){
-                jarJar.health-=luke.attack;
-                luke.health-=jarJar.attack
-                printToScreen ();
-            }
+            // // Mace fight series
+            // if (userID=="mace" && enemyID=="luke"){
+            //     jarJar.health-=luke.attack;
+            //     luke.health-=jarJar.attack
+            //     printToScreen ();
+            // }
+            user.health -= enemy.attack;
+            enemy.health -= user.attack
+            printToScreen();
 
             }
         fights ();
