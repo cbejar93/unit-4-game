@@ -11,3 +11,8 @@ image1{
 h1{
     color: yellow;
 }
+
+button{
+    background-color: black;
+    color: white;
+}

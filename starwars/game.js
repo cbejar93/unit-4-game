@@ -49,8 +49,8 @@ $("#foe").on("click", function(){
     $("#battle").append("#userSelect .image1")
     $("#foe .image1").hide();
     // this creates the attack button, and also the function for how attacking is giong to go
-    $("#battle").append("<button>")
-        .text("ATTACK")
+    $("#battle").append("<button> Attack! </button>")
+    $("button").css({"background-color": "black", "color": "white"})
       
 });
 
